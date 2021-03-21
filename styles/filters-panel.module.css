@@ -1,0 +1,82 @@
+.filters-panel {
+  padding: 10px;
+  border: 1px solid #d8dee2;
+  border-radius: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.filter {
+  margin-right: 8px;
+  padding: 7px 10px;
+  border-radius: 4px;
+  border: 1px solid #bac4da;
+  font-weight: 500;
+  color: #3174ee;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter span {
+    position: relative;
+    margin-right: 8px;
+}
+
+.filter span::after {
+  position: absolute;
+  right: -13px;
+  top: -1px;
+  display: none;
+  content: "\2713";
+  /* margin-left: 3px; */
+  height: 15px;
+  vertical-align: center;
+  padding: 0;
+}
+
+.filter--clear {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  color: #fff;
+  background-color: #3174ee;
+  border: 1px solid #3174ee;
+}
+
+.filter--active {
+  color: #fff;
+  background-color: #3174ee;
+  border: 1px solid #3174ee;
+}
+
+.filter--active span::after{
+  display: inline-block;
+}
+
+.input {
+  padding: 7px;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #bac4da;
+  border-right: none;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.filter:focus {
+  outline: none;
+}
+
+
+@media (max-width: 500px) {
+  .filters-panel {
+    justify-content: center;
+  }
+
+  .filters-panel > * + * {
+    margin-top: 7px;
+  }
+}
