@@ -4,6 +4,7 @@ import FiltersPanel from './FiltersPanel'
 import JobsGrid from './JobsGrid'
 
 export default function JobsList(props) {
+  //initializing state for filter properties
   const [isDateFilterActive, setIsDateFilterActive] = useState(false)
   const [nameFilterValue, setNameFilterValue] = useState('')
 
@@ -16,14 +17,14 @@ export default function JobsList(props) {
     ? props.jobs.filter(job => new Date(job.OBJpostingDate) > date)
     : [...props.jobs]
 
-  // If there is a name inputed, perform filtering by name also
+  // If there is a name inputed, perform filtering by company name
   if (nameFilterValue) {
     jobsArray = jobsArray.filter(job =>
       job.companyName.toLowerCase().includes(nameFilterValue.toLowerCase())
     )
   }
 
-  // if filtered array greater then 10 elements, limit array length to 10
+  // if filtered array greater then 10 elements, limiting array length to 10
   jobsArray.length > 10 && (jobsArray.length = 10)
 
   return (

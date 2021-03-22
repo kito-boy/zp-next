@@ -9,7 +9,7 @@ export default function FiltersPanel(props) {
           type='text'
           value={props.nameFilterValue}
           onInput={props.setNameFilter}
-          placeholder='filter by company name'
+          placeholder='Filter by company name'
         />
         <button
           className={`${styles.filter} ${styles['filter--clear']}`}
@@ -25,7 +25,7 @@ export default function FiltersPanel(props) {
           props.isDateFilterActive ? styles['filter--active'] : ''
         }`}
       >
-        <span>posted in the last 7 days</span>
+        <span>Posted in the last 7 days</span>
       </button>
     </div>
   )

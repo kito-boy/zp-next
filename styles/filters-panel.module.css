@@ -21,17 +21,16 @@
 }
 
 .filter span {
-    position: relative;
-    margin-right: 8px;
+  position: relative;
+  margin-right: 8px;
 }
 
 .filter span::after {
+  content: '\2713';
   position: absolute;
   right: -13px;
   top: -1px;
   display: none;
-  content: "\2713";
-  /* margin-left: 3px; */
   height: 15px;
   vertical-align: center;
   padding: 0;
@@ -51,8 +50,8 @@
   border: 1px solid #3174ee;
 }
 
-.filter--active span::after{
-  display: inline-block;
+.filter--active span::after {
+  display: block;
 }
 
 .input {
@@ -69,7 +68,6 @@
 .filter:focus {
   outline: none;
 }
-
 
 @media (max-width: 500px) {
   .filters-panel {
